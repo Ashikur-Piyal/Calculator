@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: Arial;
+      margin: 40px;
+      display: grid;
+      place-items: center;
+    }
+    .numberButton {
+      height: 60px;
+      width: 60px;
+      border-radius: 30px;
+      border: none;
+      font-size: 25px;
+      cursor: pointer;
+      background-color: rgb(75, 75, 75);
+      color: white;
+    }
+    .functionButton {
+      height: 60px;
+      width: 60px;
+      border-radius: 30px;
+      border: none;
+      font-size: 25px;
+      cursor: pointer;
+      background-color: rgb(237, 174, 72);
+      color: rgb(236, 218, 218);
+    }
+    .clear {
+      font-size: 20px;
+      background-color: rgb(253, 96, 96);
+    }
+    .result {
+      color: white;
+      font-size: 60px;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="result js-result"></div>
+
+  <p>
+    <button class="numberButton" onclick="
+      cal += '1';
+      document.querySelector('.js-result').innerHTML = cal;
+      "
+      >1</button>
+    <button class="numberButton" onclick="
+    cal += '2';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">2</button>
+    <button class="numberButton" onclick="
+    cal += '3';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">3</button>
+    <button class="functionButton" onclick="
+    cal += ' + ';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">+</button>
+  </p>
+
+  <p>
+    <button class="numberButton" onclick="
+      cal += '4';
+      document.querySelector('.js-result').innerHTML = cal;
+      "
+      >4</button>
+    <button class="numberButton" onclick="
+    cal += '5';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">5</button>
+    <button class="numberButton" onclick="
+    cal += '6';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">6</button>
+    <button class="functionButton" onclick="
+    cal += ' - ';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">-</button>
+  </p>
+
+  <p>
+    <button class="numberButton" onclick="
+      cal += '7';
+      document.querySelector('.js-result').innerHTML = cal;
+      "
+      >7</button>
+    <button class="numberButton" onclick="
+    cal += '8';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">8</button>
+    <button class="numberButton" onclick="
+    cal += '9';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">9</button>
+    <button class="functionButton" onclick="
+    cal += ' * ';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">*</button>
+  </p>
+
+  <p>
+    <button class="numberButton" onclick="
+      cal += '0';
+      document.querySelector('.js-result').innerHTML = cal;
+      "
+      >0</button>
+    <button class="numberButton" onclick="
+    cal += '.';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">.</button>
+    <button class="numberButton" onclick="
+    cal = eval(cal);
+    document.querySelector('.js-result').innerHTML = cal;
+    ">=</button>
+    <button class="functionButton" onclick="
+    cal += ' / ';
+    document.querySelector('.js-result').innerHTML = cal;
+    ">/</button>
+  </p>
+
+  <button class="functionButton clear" onclick="
+    cal = '';
+    document.querySelector('.js-result').innerHTML = '';
+    ">Clear</button>
+
+  <script>
+    let cal = '';
+  </script>
+</body>
+</html>
